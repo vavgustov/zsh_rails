@@ -1,4 +1,4 @@
 #### Installation
 ```shell
-patch < file.patch
+patch < zsh_rails.patch
 ```

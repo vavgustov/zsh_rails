@@ -1,26 +1,27 @@
 diff --git a/plugins/bundler/bundler.plugin.zsh b/plugins/bundler/bundler.plugin.zsh
-index 382a1a4..e8828ac 100644
+index 382a1a4..7001269 100644
 --- a/plugins/bundler/bundler.plugin.zsh
 +++ b/plugins/bundler/bundler.plugin.zsh
 @@ -91,8 +91,10 @@ _binstubbed() {
  _run-with-bundler() {
    if _bundler-installed && _within-bundled-project; then
      if _binstubbed $1; then
-+      print 'command executed: ./bin/'$@
++      print "$fg_bold[blue]command executed: $fg_bold[green]./bin/"$@$reset_color
        ./bin/$@
      else
-+      print 'command executed: bundle exec' $@
++      print "$fg_bold[blue]command executed: $fg_bold[green]bundle exec "$@$reset_color      
        bundle exec $@
      fi
    else
 diff --git a/plugins/rails/rails.plugin.zsh b/plugins/rails/rails.plugin.zsh
-index 8af1d63..628b492 100644
+index 8af1d63..ef3301f 100644
 --- a/plugins/rails/rails.plugin.zsh
 +++ b/plugins/rails/rails.plugin.zsh
 @@ -1,5 +1,6 @@
  function _rails_command () {
-   if [ -e "bin/rails" ]; then
-+    print 'command executed: bin/rails '$@
+-  if [ -e "bin/rails" ]; then
++  if [ -e "bin/rails" ]; then    
++    print "$fg_bold[blue]command executed: $fg_bold[green]bin/rails "$@$reset_color
      bin/rails $@
    elif [ -e "script/rails" ]; then
      ruby script/rails $@
@@ -28,7 +29,7 @@ index 8af1d63..628b492 100644
  
  function _rake_command () {
    if [ -e "bin/rake" ]; then
-+    print 'command executed: bin/rake '$@
++    print "$fg_bold[blue]command executed: $fg_bold[green]bin/rake "$@$reset_color
      bin/rake $@
    else
      command rake $@

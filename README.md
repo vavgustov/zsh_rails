@@ -1,11 +1,11 @@
 # ZSH Rails
-Patch for rails and rbenv plugins for oh-my-zsh.
+Patch for rails and rbenv plugins for oh-my-zsh to show actual executed command (e.g. using bundle exec or ./bin wrappers).
 
 ## Installation
-execute under ~/.oh-my-zsh:
+Execute under ~/.oh-my-zsh:
 ```shell
 patch < zsh_rails.patch
 ```
 
-## TODO
-how to work with zsh functions?
+## Todo
+How to work with zsh functions?

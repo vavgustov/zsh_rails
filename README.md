@@ -1,5 +1,5 @@
 # ZSH Rails
-Patch for rails and rbenv plugins for oh-my-zsh to show actual executed command (e.g. using bundle exec or ./bin wrappers).
+Patch for rails and rbenv plugins for oh-my-zsh to show actual executed command (e.g. using `bundle exec` or `./bin` wrappers).
 
 ![image](https://user-images.githubusercontent.com/312873/39549026-16fc7304-4e65-11e8-8e5c-021c31b35afc.png)
 
